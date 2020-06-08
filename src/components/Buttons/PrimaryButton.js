@@ -6,7 +6,6 @@ function PrimaryButton(props) {
 
   return (
     <Button
-      {...props}
       bg={theme.buttons.primary.backgroundColor}
       color={theme.buttons.primary.color}
       borderRadius="button"
@@ -33,6 +32,7 @@ function PrimaryButton(props) {
       _hover={{
         bg: theme.buttons.primary.hoverBackgroundColor,
       }}
+      {...props}
     >
       {props.children}
     </Button>

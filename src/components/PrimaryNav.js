@@ -5,6 +5,7 @@ import { Link as GatsbyLink } from 'gatsby';
 import VisuallyHidden from '@reach/visually-hidden';
 import { Nav, NavMenu, NavItem, NavLink } from './Nav';
 import Image from './Image';
+import PrimaryButton from '../components/Buttons/PrimaryButton';
 
 const INITIAL_TOGGLE_STATE = false;
 
@@ -80,7 +81,7 @@ const PrimaryNav = forwardRef(
           display={['flex', 'block', 'flex']}
           width={['auto', 'full', 'auto']}
           alignItems="center"
-          justify="flex-end"
+          justify="flex-start"
           flexGrow={1}
           hidden={!isVisible || undefined}
           aria-hidden={isVisible}
@@ -98,12 +99,22 @@ const PrimaryNav = forwardRef(
               mx={[undefined, undefined, index !== src.length - 1 ? 6 : 8]}
               display="block"
               fontWeight="bold"
-              textAlign="right"
+              textAlign="left"
             >
               <NavLink to={link.slug}>{toUpperCase(link.name)}</NavLink>
             </NavItem>
           ))}
         </NavMenu>
+        <Flex direction="row" justify="flex-end">
+          <PrimaryButton
+            bg={theme.colors['rbb-white']}
+            color={theme.colors['rbb-black-000']}
+            onClick={() => console.log('got it')}
+            hidden={!isVisible || undefined}
+          >
+            Subscribe
+          </PrimaryButton>
+        </Flex>
       </Nav>
     );
   }
