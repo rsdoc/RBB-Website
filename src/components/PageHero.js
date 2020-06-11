@@ -34,6 +34,7 @@ const PageHero = ({ title, subtitle, heroImageUrl, hasFadedHeroImage }) => {
           alignItems="center"
           padding="70px 24px 1.5rem"
           minHeight="240px"
+          maxW="95%"
         >
           <PageHeading>{title}</PageHeading>
           <PageSubtitle>{subtitle}</PageSubtitle>

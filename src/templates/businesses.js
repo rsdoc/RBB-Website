@@ -142,8 +142,9 @@ export default function Businesses(props) {
         px="30px"
         onClose={onClose}
         onClick={onOpen}
+        maxW="100%"
       >
-        Register a Business
+        Add Business
       </Button>
       <ModalForm isOpen={isOpen} onClose={onClose} />
     </>
